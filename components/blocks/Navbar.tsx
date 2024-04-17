@@ -4,12 +4,12 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <nav className='flex flex-nowrap justify-between items-center px-8 py-4 w-full'>
-            <h2 className='text-xl'> <Link href={"/"}>Hrushikesh</Link> </h2>
-            <div className='flex items-center gap-10 text-slate-500'>
+        <nav className='flex flex-nowrap flex-col md:flex-row justify-between items-center px-8 py-4 w-full'>
+            <h2 className='text-xl'> <Link href={"/"}>Hrushikesh Dongre</Link> </h2>
+            <div className='flex items-center gap-10 text-slate-500 mt-8 md:mt-0'>
                 <Link className='hover:text-black' href={"/blogs"}>Blogs</Link>
                 <a className='hover:text-black' target='_blank' href='https://www.linkedin.com/in/hrushikeshdongre/'>
-                    <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
+                    <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-normal  text-white inline-block">
                         <span className="absolute inset-0 overflow-hidden rounded-full">
                             <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </span>

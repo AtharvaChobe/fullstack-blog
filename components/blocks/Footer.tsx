@@ -38,7 +38,7 @@ const Footer = () => {
                 </a>
             </div>
                 <div className='flex flex-nowrap gap-4 items-center mt-4 w-fit pt-1 border-t-2'>
-                    <a href="https://linked.com"><LiaLinkedin size={30} /></a>
+                    <a href="https://www.linkedin.com/in/hrushikeshdongre/"><LiaLinkedin size={30} /></a>
                     <a href="https://github.com/Hrushikeshhad123?tab=overview&from=2024-04-01&to=2024-04-15"><LiaGithubSquare size={30} /></a>
                     <a href="https://linked.com"><LiaMailBulkSolid size={30} /></a>
                 </div>

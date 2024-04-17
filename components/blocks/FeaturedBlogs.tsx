@@ -31,7 +31,7 @@ const FeaturedBlogs = () => {
 
     return (
         <>
-            <h1 className='mt-[70%] md:mt-52 ml-36 '>Latest Blogs <CgArrowDown /></h1>
+            <h1 className='mt-[80%] md:mt-52 md:ml-36 ml-12'>Latest Blogs <CgArrowDown /></h1>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-4 px-5 m-auto max-w-[80%]'>
                 {results.map((blog) => (
                     <div key={blog._id} className='p-3 rounded-lg shadow-md flex flex-col items-center border-2'>
