@@ -6,7 +6,7 @@ export const addUser = async (user:any) =>{
     try {
         await dbConfig();
         const newUser = await userModel.create(user);
-        return NextResponse.json({newUser})
+        return JSON.parse(JSON.stringify(newUser));
     } catch (error) {
         console.log(error)
         return NextResponse.json({error})

@@ -4,6 +4,7 @@ import { WebhookEvent } from '@clerk/nextjs/server'
 import userModel from '@/models/userModel'
 import { clerkClient } from '@clerk/nextjs'
 import { NextResponse } from 'next/server'
+import { addUser } from '@/actions/user.actions'
 
 export async function POST(req: Request) {
 
@@ -61,7 +62,7 @@ export async function POST(req: Request) {
             email: email_addresses[0].email_address,
             username: username
         }
-        const newUser = await userModel.create(user);
+        const newUser = await addUser(user);
         if (newUser) {
             await clerkClient.users.updateUserMetadata(id, {
                 publicMetadata: {
