@@ -5,7 +5,7 @@ import Spinner from './Spinner';
 import Link from 'next/link';
 import { CgArrowDown } from 'react-icons/cg';
 
-const FeaturedBlogs = () => {
+const FeaturedBlogs = () => { 
     const [loading, setLoading] = useState(false);
     const [results, setResults] = useState<any[]>([]);
 
