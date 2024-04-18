@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Spinner from '@/components/blocks/Spinner';
+import { useAuth } from '@clerk/nextjs';
 
 const Page = () => {
   const [results, setResults] = useState<any[]>([]);
   const [loading, setloading] = useState(false);
+  const { userId } = useAuth();
 
   const getAllBlogs = async () => {
     try {
@@ -32,10 +34,17 @@ const Page = () => {
     return <Spinner />
   }
 
+
   if (results) {
     return (
       <>
-        <Link className='px-2 mt-10 py-1 font-bold ml-6 rounded-md bg-slate-400 text-white' href={"create"}>Create Blog</Link>
+        {
+          userId === process.env.NEXT_PUBLIC_ADMIN1 || userId === process.env.NEXT_PUBLIC_ADMIN2
+          ?
+          <Link className='px-2 mt-10 py-1 font-bold ml-6 rounded-md bg-slate-400 text-white' href={"create"}>Create Blog</Link>
+          :
+          ""
+        }
         <div className="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full p-5">
           {results.map((r) => (
             <div key={r._id} className="bg-white relative rounded-lg shadow-md overflow-hidden max-h-1/3">

@@ -1,7 +1,8 @@
 import dbConfig from "@/libs/dbConfig"
 import blogModel from "@/models/blogModel";
-import { Dancing_Script } from "next/font/google";
+import { auth, useAuth } from "@clerk/nextjs";
 import { NextResponse } from "next/server"
+
 
 export async function POST(req:any){
     try {

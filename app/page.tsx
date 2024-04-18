@@ -4,6 +4,7 @@ import { ProjectTabs } from '@/components/blocks/ProjectTabs'
 import React from 'react'
 
 const page = () => {
+  
   return (
     <div>
       <HeroSection />
