@@ -7,7 +7,6 @@ const page = () => {
   const path = usePathname();
   const p = path.split("/");
   const id = p[2];
-  // console.log(id)
 
   return (
     <BlogById blogId={id}/>
